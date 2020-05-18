@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 function Copyright() {
   return (
@@ -22,7 +24,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '10vh',
+    minHeight: '20vh',
+    
+  },
+  text: {
+    '& > *': {
+        margin: theme.spacing(1),
+        width: '30ch',
+      },
   },
   main: {
     marginTop: theme.spacing(8),
@@ -42,6 +51,12 @@ export default function Footer() {
   return (
     <div className={classes.root}>
       <CssBaseline />
+      <form className={classes.text} noValidate autoComplete="off">
+      <TextField id="outlined-basic" label="Email" variant="outlined"/>
+      <Button variant="contained" color="primary">
+        Subscribe
+      </Button>
+    </form>
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1">Footer Content</Typography>
