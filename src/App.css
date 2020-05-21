@@ -1,3 +1,16 @@
 .app-bar {
   display: inline-block;
 }
+
+.about {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.goals {
+  margin-top: 50px;
+}
+
+.classes.media {
+  height: 30px;
+}
